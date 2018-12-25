@@ -59,16 +59,17 @@ Commit:
 ##############################################
 
 Encrypted:
-./docker-compose_arm.yml
-./docker-compose_x86.yml
-./src/keys/server.*
-./src/mysql/dump/dump_*
-./src/www_rpi/auth/authDB.php 
-./src/www/auth/authDB.php 
-./src/mysql/data_rpi/dump_mysql.sql
-./src/mysql/data_rpi/alfdb/alf_users.frm 
-./src/mysql/data/alfdb/alf_users.frm 
-./src/mysql/data/alfdb/alf_users.ibd 
+
+\- ./docker-compose_arm.yml
+\- ./docker-compose_x86.yml
+\- ./src/keys/server.*
+\- ./src/mysql/dump/dump_*
+\- ./src/www_rpi/auth/authDB.php 
+\- ./src/www/auth/authDB.php 
+\- ./src/mysql/data_rpi/dump_mysql.sql
+\- ./src/mysql/data_rpi/alfdb/alf_users.frm 
+\- ./src/mysql/data/alfdb/alf_users.frm 
+\- ./src/mysql/data/alfdb/alf_users.ibd 
 
 APACHE 2:
 	
