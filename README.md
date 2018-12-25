@@ -1,6 +1,6 @@
 ##############################################
 
-					README
+				AlfredBrain
 
 ##############################################
 
@@ -54,13 +54,13 @@ Commit:
 
 ##############################################
 
-				 Composition
+				Composition
 
 ##############################################
 
 Encrypted:
 
-\- ./docker-compose_arm.yml
+<pre><code>\- ./docker-compose_arm.yml
 \- ./docker-compose_x86.yml
 \- ./src/keys/server.*
 \- ./src/mysql/dump/dump_*
@@ -70,6 +70,7 @@ Encrypted:
 \- ./src/mysql/data_rpi/alfdb/alf_users.frm 
 \- ./src/mysql/data/alfdb/alf_users.frm 
 \- ./src/mysql/data/alfdb/alf_users.ibd 
+</pre></code>
 
 APACHE 2:
 	
