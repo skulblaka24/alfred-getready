@@ -1,0 +1,91 @@
+#####################################################
+
+#             Création serveur web                  #
+
+#       Avec: Apache + php + ssh2 + mysql
+
+# Pour lancer en arrière plan: $ docker-compose up -d
+
+#####################################################
+
+# Liens:
+
+#       - ssh2
+#       http://lindev.fr/?post/2009/01/19/Installer-le-module-SSH2-pour-php
+#       - Docker compose second exemple: 
+#       https://tech.gamuza.fr/docker-les-commandes-de-base
+#       - Docker compose premier exemple:
+#       https://www.metal3d.org/ticket/docker-apache-mysql-php
+#
+
+#####################################################
+
+# Install SSH par défaut ?
+
+apache:
+    image: skulblaka/apache:latest
+    volumes:
+    - "./src/www:/var/www/html"
+    - "./src/php/modules:/usr/local/lib/php/extensions/no-debug-non-zts-20151012"
+    - "./src/php/conf:/usr/local/etc/php/conf.d"
+    - "./src/apache2/sites-available:/etc/apache2/sites-available"
+    - "./src/apache2/sites-enabled:/etc/apache2/sites-enabled"
+    - "./src/apache2/mods-enabled:/etc/apache2/mods-enabled"
+    - "./src/keys:/etc/apache2/keys"
+    ports:
+    - "80:80"
+    - "443:443"
+    environment:
+    - ALLOW_OVERRIDE=true
+    links:
+#    - "mariadb:db"
+    - mysql
+#   privileged: true
+
+mysql:
+    image: skulblaka/mysql:latest
+    ports:
+    - "3306:3306"
+    volumes:
+    - "./src/mysql/data/:/var/lib/mysql"
+    - "./src/mysql/dump:/dump"
+    environment:
+    - MYSQL_ROOT_PASSWORD=$ANSIBLE_VAULT;1.1;AES256
+30313933616234303737353535633865643831396533613664653062323734366364383665306365
+3534646238653531303135623565353232333265353937640a346333623937336434383838303266
+31313736636563623631343330353537363163393938666664306433616665383933346534336265
+3564646562366262610a306363386631323638353535353334323237386233363231616565666561
+3561
+    privileged: true
+
+#phpmyadmin:     --- NOT WORKING ---
+#  image: phpmyadmin/phpmyadmin
+#  ports:
+#    - "8081:8080"
+#  environment:
+#    - MYSQL_ROOT_PASSWORD=$ANSIBLE_VAULT;1.1;AES256
+#30313933616234303737353535633865643831396533613664653062323734366364383665306365
+#3534646238653531303135623565353232333265353937640a346333623937336434383838303266
+#31313736636563623631343330353537363163393938666664306433616665383933346534336265
+#3564646562366262610a306363386631323638353535353334323237386233363231616565666561
+#3561
+#  links:
+#    - "mariadb:db"
+
+# mariadb:
+#   image: skulblaka/mariadb:10.0
+#   environment:
+#     - MYSQL_ROOT_PASSWORD=$ANSIBLE_VAULT;1.1;AES256
+#30313933616234303737353535633865643831396533613664653062323734366364383665306365
+#3534646238653531303135623565353232333265353937640a346333623937336434383838303266
+#31313736636563623631343330353537363163393938666664306433616665383933346534336265
+#3564646562366262610a306363386631323638353535353334323237386233363231616565666561
+#3561
+#     - TERM=dumb
+#   volumes:
+#     - "./src/mysql/data:/var/lib/mysql"
+#     - "./src/mysql/dump:/dump"
+
+
+
+

@@ -1,0 +1,30 @@
+############################################
+
+			Installation SSH2
+
+############################################
+
+apt-get update
+
+apt-get install -y wget make tar libssh2-1-dev ssh
+
+cd /usr/local/src/
+wget http://pecl.php.net/get/ssh2-1.0.tgz
+tar xzf ssh2-1.0.tgz
+rm ssh2-1.0.tgz
+cd ssh2-1.0
+
+phpize && ./configure --with-ssh2 && make
+
+
+# Dossier pour le fichier d'ajout de l'extension ssh2
+/usr/local/etc/php/conf.d/ssh2.ini
+
+
+# Dossier pour le module ssh2.so
+Numero à la fin à récuperer avec un fichier php contenant phpinfo()
+et en face de extension_dir
+
+/usr/local/lib/php/extensions/no-debug-non-zts-20151012 
+
+

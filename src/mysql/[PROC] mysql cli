@@ -1,0 +1,20 @@
+##############################################
+
+			Procédure mysql cli
+
+##############################################
+
+# Connect:
+$ mysql -h 127.0.0.1 -u root -p
+
+# Create database
+MYSQL> CREATE DATABASE alfdb;
+
+# Show database
+$ mysqlshow -h 127.0.0.1 -u root -p alfdb
+
+# Dump database
+$ mysqldump -h 127.0.0.1 -u root -p > dump.sql
+
+# Import database
+$ mysql -h 127.0.0.1 -u root -p alfdb < dump.sql
