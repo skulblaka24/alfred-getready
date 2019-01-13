@@ -69,7 +69,7 @@ Encrypted:
 ./src/mysql/data_rpi_temp/dump_mysql.sql
 ./src/mysql/data_rpi_temp/mysql/user.MYD
 ./src/mysql/dump/dump_alfred_26\:09\:16.sql
-./src/mysql/dump/dump_mysql_arm.sql
+./src/mysql/dump/dump_mysql_arm.sql 
 ./src/keys/server.*
 ./src/www_rpi/auth/authDB.php 
 ./src/www/auth/authDB.php
