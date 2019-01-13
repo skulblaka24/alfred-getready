@@ -4,7 +4,7 @@ if (isset($_POST['connexion'])) {
                 header('Location: C291iQ345q8d606kBM5D26P2b12tZ5B2lY3swsF6qB74O2SrzBr6AzcN1M548OVo.php');
         
         $connection = ssh2_connect('192.168.1.6', 3004);
-                                        ssh2_auth_password($connection, 'AlfredP24', 'Skulblaka24');
+                                        ssh2_auth_password($connection, 'USER', 'PASSWORD');
 
                                         $stream = ssh2_exec($connection, 'gpio mode 1 out');
 
@@ -21,7 +21,7 @@ if (isset($_POST['ouvert'])) {
                 header('Location: C291iQ345q8d606kBM5D26P2b12tZ5B2lY3swsF6qB74O2SrzBr6AzcN1M548OVZ.php');
 
                 $connection = ssh2_connect('192.168.1.6', 3004);
-                                        ssh2_auth_password($connection, 'AlfredP24', 'Skulblaka24');
+                                        ssh2_auth_password($connection, 'USER', 'PASSWORD');
 
                                         $stream = ssh2_exec($connection, 'gpio mode 1 out');
 
@@ -35,7 +35,7 @@ if (isset($_POST['fermer'])) {
                 header('Location: C291iQ345q8d606kBM5D26P2b12tZ5B2lY3swsF6qB74O2SrzBr6AzcN1M548OVo.php');
 
                 $connection = ssh2_connect('192.168.1.6', 3004);
-                                        ssh2_auth_password($connection, 'AlfredP24', 'Skulblaka24');
+                                        ssh2_auth_password($connection, 'USER', 'PASSWORD');
 
                                         $stream = ssh2_exec($connection, 'gpio mode 1 out');
 

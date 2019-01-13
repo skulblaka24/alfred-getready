@@ -8,16 +8,16 @@
    
     //Démarrage de la session
 	session_start();
-	include ("./login.php");
+	include ("./login2.php");
 
 	//Encodage de la page
 	date_default_timezone_set("Europe/Paris");
 	header('Content-type: text/html; charset=UTF-8');
 
-    //Définition des paramètre de connexion à la base de données
-	include ("../../../auth/authDB.php");
+    //Definition des parametre de connexion la base de donnees
+	include ("../../auth/authDB.php");
 
-    //Connexion à la base de données
+    //Connexion la base de données
 	$pdo = new PDO("mysql:host=".SERVER.";dbname=".NAME, USER, PASSWORD);
 
 	//Définition de l'encodage dans la BDD

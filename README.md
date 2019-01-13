@@ -62,14 +62,18 @@ Encrypted:
 
 <pre><code>./docker-compose_arm.yml
 ./docker-compose_x86.yml
-./src/keys/server.*
-./src/mysql/dump/dump_*
-./src/www_rpi/auth/authDB.php 
-./src/www/auth/authDB.php 
+./src/mysql/data/alfdb/alf_users.ibd
+./src/mysql/data/mysql/user.MYD
 ./src/mysql/data_rpi/dump_mysql.sql
-./src/mysql/data_rpi/alfdb/alf_users.frm 
-./src/mysql/data/alfdb/alf_users.frm 
-./src/mysql/data/alfdb/alf_users.ibd 
+./src/mysql/data_rpi/mysql/user.MYD
+./src/mysql/data_rpi_temp/dump_mysql.sql
+./src/mysql/data_rpi_temp/mysql/user.MYD
+./src/mysql/dump/dump_alfred_26\:09\:16.sql
+./src/mysql/dump/dump_mysql_arm.sql
+./src/keys/server.*
+./src/www_rpi/auth/authDB.php 
+./src/www/auth/authDB.php
+./src/www_rpi/test/auth/authDB.php
 </pre></code>
 
 APACHE 2:

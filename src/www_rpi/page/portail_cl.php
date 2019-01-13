@@ -17,7 +17,7 @@
         header('Content-type: text/html; charset=UTF-8');
 
         //Définition des paramètre de connexion à la base de données
-        include ("../../auth/authDB.php");
+        include ("../auth/authDB.php");
 
          //Connexion à la base de données
         $pdo = new PDO("mysql:host=".SERVER.";dbname=".NAME, USER, PASSWORD);
